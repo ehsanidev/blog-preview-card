@@ -1,0 +1,125 @@
+@import url("./assets/fonts/static/Figtree-ExtraBold.ttf");
+@import url("./assets/fonts/static/Figtree-Medium.ttf");
+
+:root {
+    --background-btn-color: hsl(47, 88%, 63%);
+    --background-card-color: hsl(0, 0%, 100%);
+    --paragraph-color: hsl(0, 0%, 42%);
+    --title-color: hsl(0, 0%, 7%);
+
+    --paragraph-font-size: 16px;
+    --weight-extraBold: 800;
+    --weight-Medium: 500;
+
+    --radius: 15px;
+    --border: 1px solid hsl(0, 0%, 7%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-btn-color);
+}
+
+main {
+    position: relative;
+    width: 23rem;
+    height: 30rem;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-card-color);
+    display: grid;
+    place-items: start;
+    border-radius: 15px;
+    padding: 20px;
+    border: var(--border);
+    z-index: 2;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    right: -12px;
+    width: 103%;
+    height: 103%;
+    background-color: var(--title-color);
+    border-radius: 15px 27px 27px 27px;
+    z-index: 1;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+a {
+    padding: 8px;
+    text-decoration: none;
+    background-color: var(--background-btn-color);
+    font-size: small;
+    font-weight: var(--weight-extraBold);
+    color: var(--title-color);
+    border-radius: 5px;
+}
+
+span {
+    font-size: 15px;
+    font-weight: var(--weight-Medium);
+    color: var(--title-color);
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: larger;
+    font-weight: var(--weight-extraBold);
+    color: var(--title-color);
+}
+
+h1:hover {
+    color: var(--background-btn-color);
+    cursor: pointer;
+}
+
+p {
+    color: var(--paragraph-color);
+    font-weight: var(--weight-Medium);
+    font-size: var(--paragraph-font-size);
+}
+
+.avatar-section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    & .avatar {
+        display: block;
+        width: 20%;
+        & img {
+            display: block;
+            width: 100%;
+        }
+    }
+    & h3 {
+        font-size: small;
+        font-weight: var(--weight-extraBold);
+        color: var(--title-color);
+    }
+}
