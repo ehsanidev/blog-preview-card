@@ -117,7 +117,7 @@ p {
             width: 100%;
         }
     }
-    & h3 {
+    & h2 {
         font-size: small;
         font-weight: var(--weight-extraBold);
         color: var(--title-color);
