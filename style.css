@@ -1,5 +1,16 @@
-@import url("./assets/fonts/static/Figtree-ExtraBold.ttf");
-@import url("./assets/fonts/static/Figtree-Medium.ttf");
+@font-face {
+    font-family: 'Figtree-ExtraBold';
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree-Medium';
+    src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
 
 :root {
     --background-btn-color: hsl(47, 88%, 63%);
@@ -8,8 +19,6 @@
     --title-color: hsl(0, 0%, 7%);
 
     --paragraph-font-size: 16px;
-    --weight-extraBold: 800;
-    --weight-Medium: 500;
 
     --radius: 15px;
     --border: 1px solid hsl(0, 0%, 7%);
@@ -24,8 +33,6 @@
 }
 
 body {
-    font-family: "Figtree", sans-serif;
-    font-style: normal;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -74,22 +81,22 @@ a {
     padding: 8px;
     text-decoration: none;
     background-color: var(--background-btn-color);
+    font-family: 'Figtree-ExtraBold', sans-serif;
     font-size: small;
-    font-weight: var(--weight-extraBold);
     color: var(--title-color);
     border-radius: 5px;
 }
 
 span {
     font-size: 15px;
-    font-weight: var(--weight-Medium);
+    font-family: 'Figtree-Medium', sans-serif;
     color: var(--title-color);
     opacity: 0.9;
 }
 
 h1 {
     font-size: larger;
-    font-weight: var(--weight-extraBold);
+    font-family: 'Figtree-ExtraBold', sans-serif;
     color: var(--title-color);
 }
 
@@ -100,7 +107,7 @@ h1:hover {
 
 p {
     color: var(--paragraph-color);
-    font-weight: var(--weight-Medium);
+    font-family: 'Figtree-Medium', sans-serif;
     font-size: var(--paragraph-font-size);
 }
 
@@ -119,7 +126,7 @@ p {
     }
     & h2 {
         font-size: small;
-        font-weight: var(--weight-extraBold);
+        font-family: 'Figtree-ExtraBold', sans-serif;
         color: var(--title-color);
     }
 }
